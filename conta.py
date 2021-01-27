@@ -6,10 +6,7 @@ class Conta:
         self.__titular = titularP
         self.__saldo = saldoP
         self.__limite = limiteP
-#         O P no final é para parametros
-
-
-
+#         O P no final é para indicar que são parametros
     def extrato(self):
         print("Saldo {} do titular {} ".format(self.__saldo, self.__titular))
 
