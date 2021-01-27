@@ -1,7 +1,14 @@
 class Cliente:
 
     def __init__(self, nome):
-        self.nome = nome
+        self.__nome = nome
 
-    def extrato(self):
-        print("Nome do cliente é {}".format(self.nome).upper())
+    @property
+    def nome(self):
+        print("chamando o @propety nome()")
+        return self.__nome.title()
+
+    @nome.setter
+    def nome(self, nome):
+        print("chamando o setter nome()")
+        self.__nome = nome
